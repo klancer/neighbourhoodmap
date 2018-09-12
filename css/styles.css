@@ -1,0 +1,100 @@
+@media (max-width: 800px) {
+	.col-sm-4 {
+		height: 60%;
+	}
+
+	.list-group {
+		max-height: 200px;
+	}
+
+	.bordered {
+		border: 0;
+	}
+}
+
+/*@media (min-width: 801px) {
+	.bordered {
+	    border-style: solid !important;
+	    border-color: black !important;
+	    border-right-style: solid !important;
+		border-width: 0px 18px 0px 0px !important;
+	}
+}*/
+
+#map {
+	height: 100%;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #08488c;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.container-fluid {
+	height:100%;
+}
+
+.row, .col-sm-4, .col-sm-8 {
+	height: 100%;
+}
+
+.main-view {
+	display: flex;
+}
+
+.map-canvas {
+	width: 100%;
+}
+
+.col-sm-8 {
+	padding: 0 !important;
+}
+
+#sidebar-header {
+	font-size: 20px;
+	text-align:center;
+	color: #FFFFFF;
+}
+
+.form-control {
+	margin-bottom: 15px;
+}
+
+.list-group {
+	font-size: 12px;
+	height: auto;
+	max-height: 500px;
+	overflow-x: hidden;
+}
+
+li:hover {
+	background: black;
+	color: white;
+}
+
+#header {
+	font-size:15px;
+	text-align:center;
+}
+
+.navbar-custom .navbar-toggler {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.gm-style-iw {
+    max-height: 300px !important;
+    overflow: auto !important;
+}
+

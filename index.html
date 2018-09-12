@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neighbourhood Map</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"  >
+    <link rel="stylesheet" href="css/bootstrap.css"  >
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+            <div id="myDIV" class="col-sm-4 col-md-4">
+				<h1 id="sidebar-header"><h1 style="color:#fff">SISF</h1></br><h4 style="color:#fff">Shenzhen International School Finder</h4>
+
+				<input id="my-input" class="form-control" type="text" placeholder="Search here..." name="filter" data-bind="textInput: filter">
+
+				<nav>
+					<ul id="sidebar-list" class="list-group" data-bind="foreach: filterSearch">
+						<li class="list-group-item" data-bind="text: name, click: $parent.showMarkerInfo.bind(name)"></li>
+					</ul>
+				</nav>
+			</div>                 
+			<div class="col-sm-8" id="map-column">
+                <div><nav class="navbar navbar-custom bg-primary">
+                     <button onclick="myFunction()" class="navbar-toggler" type="button">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     </nav>
+                </div>
+                <div id='map'>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/maps.js"></script>
+	<script src="js/lib/knockout-3.4.2.js"></script>
+	<script src="js/binding.js"></script>
+	<script>
+		function googleMapsError() {
+			alert("Google Maps failed to load. Please check your connection!");
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg32zCNwD7nH0U8LKn1REUzsgdvJa20BM&callback=initMap" onerror="googleMapsError()" async defer></script>
+
+</body>
+
+</html>
