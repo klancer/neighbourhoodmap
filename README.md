@@ -8,7 +8,7 @@ The objective is to develop a single page application featuring a map of your ne
 
 ## Procedure
 * Download or clone the repo.
-* Run or open index.html, some issues for the images not loading with this method.
+* Run or open index.html.
 * Run using python simple http server, or any other http servers. (ex: Python -m SimpleHTTPServer )
 
 ## Others
