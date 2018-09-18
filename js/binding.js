@@ -1,24 +1,26 @@
-// Hide show myDIV function
-function hideFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-    var y = document.getElementById("map-column");
-    if (y.className === "col-sm-8") {
-        y.className = "col-sm-12";
-    } else {
-        y.className = "col-sm-8";
-    }
-}
 var Stations = function(data) {
+    "user strict";
     this.name = ko.observable(data.name);
     this.marker = ko.observable(data.marker);
 };
 var ViewModel = function() {
+    "user strict";
     var self = this;
+    //  for hamburger menu icon
+    this.navClick = function() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("map-column");
+        if (y.className === "col-sm-8") {
+            y.className = "col-sm-12";
+        } else {
+            y.className = "col-sm-8";
+        }
+    }
     this.locationList = ko.observableArray([]);
     this.holdingList = ko.observableArray([]);
     MARKERS.forEach(function(stationItem) {
@@ -35,7 +37,7 @@ var ViewModel = function() {
         var filter = self.filter().toLowerCase();
         if (markerLoaded) {
             if (!filter) {
-                for (var i = 0; i < self.locationList().length; i++) {
+                for (i = 0; i < self.locationList().length; i += 1) {
                     self.locationList()[i].marker.setVisible(true);
                     self.locationList()[i].marker.setAnimation(null);
                 }
@@ -43,8 +45,9 @@ var ViewModel = function() {
             } else {
                 return ko.utils.arrayFilter(self.locationList(),
                     function(item) {
-                        var result = stringStartsWith(item.name()
-                            .toLowerCase(), filter);
+                        var result = item.name().toLowerCase().indexOf(
+                                self.filter().toLowerCase()) !==
+                            -1;
                         if (result) {
                             if (item.marker) {
                                 item.marker.setVisible(true);
@@ -61,13 +64,6 @@ var ViewModel = function() {
             return self.locationList();
         }
     });
-};
-var stringStartsWith = function(string, startsWith) {
-    string = string || "";
-    if (startsWith.length > string.length) {
-        return false;
-    }
-    return string.substring(0, startsWith.length) === startsWith;
 };
 var vm = new ViewModel();
 ko.applyBindings(vm);

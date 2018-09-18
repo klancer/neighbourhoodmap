@@ -8,11 +8,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
     <script src="js/lib/bootstrap.min.js">
     </script>
     <script src="js/lib/bootstrap.js">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
     </script>
 </head>
 <body>
@@ -36,28 +36,29 @@
             <div class="col-sm-8" id="map-column">
                 <div>
                     <nav class="navbar navbar-custom bg-primary">
-                        <button class="navbar-toggler" onclick="hideFunction()"
+                        <button class="navbar-toggler" data-bind="click: navClick"
                         type="button"><span class=
                         "navbar-toggler-icon"></span></button>
                     </nav>
                 </div>
+
                 <div id="map"></div>
             </div>
         </div>
     </div>
     <script src="js/data.js">
-    </script> 
+    </script>
     <script src="js/maps.js">
-    </script> 
+    </script>
     <script src="js/lib/knockout-3.4.2.js">
-    </script> 
+    </script>
     <script src="js/binding.js">
-    </script> 
+    </script>
     <script>
               function googleMapsError() {
                   alert("Google Maps failed to load. Please check your connection!");
               }
-    </script> 
+    </script>
     <script async defer onerror="googleMapsError()" src=
     "https://maps.googleapis.com/maps/api/js?key=AIzaSyCg32zCNwD7nH0U8LKn1REUzsgdvJa20BM&callback=initMap">
     </script>

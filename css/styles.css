@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
 	.col-sm-4 {
 		height: 60%;
 	}
@@ -10,7 +10,7 @@
 	.bordered {
 		border: 0;
 	}
-}
+}*/
 
 /*@media (min-width: 801px) {
 	.bordered {
@@ -96,6 +96,20 @@ li:hover {
 .gm-style-iw {
     max-height: 300px !important;
     overflow: auto !important;
+}
+
+@media (max-width: 800px) {
+	.col-sm-4 {
+		height: 60%;
+	}
+
+	.list-group {
+		max-height: 200px;
+	}
+
+	.bordered {
+		border: 0;
+	}
 }
 
 

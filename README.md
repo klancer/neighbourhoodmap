@@ -8,11 +8,15 @@ The objective is to develop a single page application featuring a map of your ne
 
 ## Procedure
 * Download or clone the repo.
-* Run or open index.html.
-* Run using python simple http server, or any other http servers. (ex: Python -m SimpleHTTPServer )
+* Run using localhost or http://127.0.0.1 so images will work using relative path. 
+* Use cmd python -m SimpleHTTPServer (python2)
+* Use cmd python -m http.server (python3)
+* You can access using http://localhost:8000 or http:127.0.0.1:8000 (
+default port) 
+* You can also use apache, nginx, npm http servers.
 
 ## Others
-Screenshot of the running project is included.
+Screenshot of the running project is included [Map neighborhood](./Screenshot.png)
 
 
 Requirements:
